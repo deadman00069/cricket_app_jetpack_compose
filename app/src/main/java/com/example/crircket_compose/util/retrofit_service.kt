@@ -6,7 +6,6 @@ import com.example.crircket_compose.util.config.KApiKey
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
-import retrofit2.http.Path
 
 
 interface RetrofitService {

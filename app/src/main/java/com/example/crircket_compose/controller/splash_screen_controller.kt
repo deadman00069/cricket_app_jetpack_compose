@@ -18,6 +18,7 @@ class SplashScreenControllerFactory(private val navController: NavController) :
 //All logic will be written here
 class SplashScreenController(navController: NavController) : ViewModel() {
 
+    //This is responsible for navigating from splashscreen to homeScreen
     init {
         viewModelScope.launch {
             delay(3000L)

@@ -13,8 +13,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Crircket_composeTheme {
-                // A surface container using the 'background' color from the theme
-              MyNav()
+                MyNav()
             }
         }
     }

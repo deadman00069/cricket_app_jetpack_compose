@@ -1,5 +1,6 @@
 package com.example.crircket_compose.widgets
 
+
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
@@ -17,6 +18,7 @@ import com.example.crircket_compose.util.KBackGroundColor
 
 @Composable
 fun CustomFixtureResultCard(data: ListOfFixtureModel) {
+
     androidx.compose.material.Card(
         modifier = Modifier
             .padding(horizontal = 16.dp, vertical = 8.dp)
@@ -37,7 +39,7 @@ fun CustomFixtureResultCard(data: ListOfFixtureModel) {
                 textAlign = TextAlign.Center,
                 modifier = Modifier.fillMaxWidth()
             )
-            androidx.compose.material.Text(
+            Text(
                 "at ${data.venue}",
                 style = MaterialTheme.typography.body1.copy(fontWeight = FontWeight.SemiBold),
                 textAlign = TextAlign.Center,
@@ -93,20 +95,6 @@ fun CustomFixtureResultCard(data: ListOfFixtureModel) {
                         )
                     }
                 }
-            }
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.Bottom,
-                horizontalAlignment = Alignment.End
-            ) {
-                Text(
-                    "Last updated",
-                    style = MaterialTheme.typography.caption.copy(color = Color.Gray)
-                )
-                Text(
-                    data.date,
-                    modifier = Modifier.padding(8.dp)
-                )
             }
         }
 //

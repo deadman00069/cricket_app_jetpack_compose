@@ -1,14 +1,12 @@
 package com.example.crircket_compose.controller
 
 import android.content.Context
-import android.util.Log
 import android.widget.Toast
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.navigation.NavController
 import com.example.crircket_compose.models.ListOfSeriesModel
 import com.example.crircket_compose.repo.CricketApiRepo
 import kotlinx.coroutines.launch
@@ -33,6 +31,7 @@ class SelectSeriesScreenController(val context: Context) : ViewModel() {
         }
     }
 
+    //This function is responsible for getting data from repo and then show the received data on screen
     private suspend fun getSeries() {
         isLoading.value = true
         val repo = CricketApiRepo()

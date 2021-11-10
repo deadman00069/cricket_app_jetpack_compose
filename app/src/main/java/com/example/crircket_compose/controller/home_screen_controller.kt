@@ -18,6 +18,7 @@ class HomeScreenControllerFactory(private val navController: NavController) :
 //All logic will be written here
 class HomeScreenController(val navController: NavController) : ViewModel() {
 
+    //When user click on series button, it will navigate to select series type screen
     fun onSeriesButtonClick() {
         viewModelScope.launch {
             delay(400)
@@ -25,12 +26,15 @@ class HomeScreenController(val navController: NavController) : ViewModel() {
         }
     }
 
+    //When user click on fixture button, it will navigate to fixture screen
     fun onFixtureButtonClick() {
         viewModelScope.launch {
             delay(400)
             navController.navigate("fixture_screen")
         }
     }
+
+    //When user click on result button, it will navigate to result screen
     fun onResultButtonClick() {
         viewModelScope.launch {
             delay(400)
